@@ -1,0 +1,55 @@
+# Remove newline between prompts
+add_newline = false
+
+command_timeout = 1000
+
+format='$time$all'
+
+# Disable username for SSH connections
+[username]
+disabled=true
+
+# Shows hostname of connected server
+[hostname]
+format='爵[$hostname](bold green) '
+
+# Config to make directory red n shit
+[directory]
+style='bold cyan'
+format=' [$path]($style)[$read_only]($read_only_style) '
+truncation_symbol='/'
+repo_root_style='bold cyan'
+repo_root_format=' [$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) '
+
+# Disabled "took 3s"
+[cmd_duration]
+disabled=true
+
+# Git branch symbol
+[git_branch]
+symbol=' '
+
+# Adds time to front of prompt     ﭮ 
+[time]
+disabled=false
+# format='[\[](blue)[$time](bold purple)[\]](blue) '
+format='[$time](bold blue) '
+time_format='%I:%M %p'
+
+# Changes the error symbol to a red X
+[character]
+success_symbol='❯❯'
+error_symbol='[❯](red)'
+
+# Changes color of Python module
+[python]
+format='via [$symbol](bold yellow)[$version]($style) (\($virtualenv\) )'
+style='bold blue'
+symbol=' '
+
+# Changes C symbol asdaosdnsado
+[c]
+format='via [$symbol$version]($style)'
+style='bold blue'
+symbol=' '
+commands=[[ "g++", "--version" ]]
