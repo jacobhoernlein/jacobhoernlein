@@ -102,5 +102,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dfconfig='/usr/bin/git --git-dir=$HOME/.dotfilesrepo/ --work-tree=$HOME'
-
+alias 'df-git'='/usr/bin/git --git-dir=$HOME/.dotfilesrepo/ --work-tree=$HOME'
