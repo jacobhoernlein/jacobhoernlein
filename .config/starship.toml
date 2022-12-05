@@ -1,5 +1,5 @@
-# # Remove newline between prompts
-# add_newline = false
+# Remove newline between prompts
+add_newline = false
 
 command_timeout = 1000
 
