@@ -103,5 +103,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias 'df-git'='/usr/bin/git --git-dir=$HOME/.df-git/ --work-tree=$HOME'
+alias 'oracle'='ssh 150.230.170.39'
+alias 'campus-vpn'='sudo openconnect -b -u jmhoernlein --authgroup=campus uavpn2.ua.edu'
+alias 'code-cli'='/usr/bin/code'
+export PATH=/home/jacob/.local/bin:$PATH
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+# export LIBGL_ALWAYS_INDIRECT=1
