@@ -1,0 +1,96 @@
+@import "frappe.css";
+
+* {
+    font-family: FiraCode Nerd Font;
+    font-size: 18px;
+    border: none;
+    border-radius: 1rem;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces,
+#window,
+#cpu,
+#memory,
+#network,
+#clock,
+#pulseaudio,
+#tray {
+    color: @text;
+    background-color: @surface0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(140, 170, 238, 0.6);
+    margin: 5px 0;
+    padding: 0.25rem 0.5rem;
+}
+
+#workspaces {
+    margin-left: 10px;
+}
+#workspaces button {
+    color: @blue;
+    padding: 0.25rem;
+}
+#workspaces button.active {
+    color: @yellow;
+}
+#workspaces button:hover {
+    color: @text;
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    border: none;
+}
+
+#window {
+    margin-left: 10px;
+}
+window#waybar.empty #window {
+    all: unset;
+}
+
+#cpu {
+    color: @maroon;
+    border-radius: 1rem 0px 0px 1rem;
+    border-right-style: none;
+}
+#memory {
+    color: @peach;
+    border-radius: 0px;
+    border-left-style: none;
+    border-right-style: none;
+}
+#network {
+    color: @yellow;
+    border-radius: 0px 1rem 1rem 0px;
+    border-left-style: none;
+    margin-right: 10px;
+}
+
+#clock.1 {
+    color: @green;
+    border-radius: 1rem 0px 0px 1rem;
+    border-right-style: none;
+}
+#clock.2 {
+    color: @teal;
+    border-radius: 0px 1rem 1rem 0px;
+    border-left-style: none;
+    margin-right: 10px;
+}
+
+#pulseaudio {
+    color: @text;
+    border-radius: 1rem 0px 0px 1rem;
+    border-right-style: none;
+    padding-right: 0px;
+}
+#tray {
+    border-radius: 0px 1rem 1rem 0px;
+    border-left-style: none;
+    margin-right: 10px;
+}

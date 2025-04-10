@@ -1,0 +1,73 @@
+{
+    "layer": "top",
+    "position": "top",
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "network",
+        "clock#1",
+        "clock#2",
+        "pulseaudio", 
+        "tray",
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": " ",
+             "default": " ",
+        },
+    },
+    "hyprland/window": {
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "$1",
+            "(.*) - Discord": "$1"
+        }
+    },
+
+    "cpu": {
+        "interval": 1,
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 1,
+        "format": " {used:.2f}/{total:.0f}GB",
+        "tooltip": false
+    },
+    "network": {
+        "interval": 1,
+        "format": " {bandwidthDownBits}  {bandwidthUpBits}",
+        "tooltip": false
+
+    },
+
+    "clock#1": {
+        "format": " {:%H:%M}",
+        "tooltip": false
+    },
+    "clock#2": {
+        "format": "󰃭 {:%a %m/%d}",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon}{volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+        "tooltip": false,
+        "on-click": "pavucontrol"
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5
+    },
+}
