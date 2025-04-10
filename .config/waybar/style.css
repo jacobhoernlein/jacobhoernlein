@@ -16,8 +16,9 @@ window#waybar {
 #cpu,
 #memory,
 #network,
-#clock,
+#custom-spotify,
 #pulseaudio,
+#clock,
 #tray {
     color: @text;
     background-color: @surface0;
@@ -71,26 +72,24 @@ window#waybar.empty #window {
     margin-right: 10px;
 }
 
-#clock.1 {
+#custom-spotify,
+#pulseaudio {
     color: @green;
+    margin-right: 10px;
+}
+
+#clock.1 {
+    color: @teal;
     border-radius: 1rem 0px 0px 1rem;
     border-right-style: none;
 }
 #clock.2 {
-    color: @teal;
+    color: @sapphire;
     border-radius: 0px 1rem 1rem 0px;
     border-left-style: none;
     margin-right: 10px;
 }
 
-#pulseaudio {
-    color: @text;
-    border-radius: 1rem 0px 0px 1rem;
-    border-right-style: none;
-    padding-right: 0px;
-}
 #tray {
-    border-radius: 0px 1rem 1rem 0px;
-    border-left-style: none;
     margin-right: 10px;
 }

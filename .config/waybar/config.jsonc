@@ -10,9 +10,10 @@
         "cpu",
         "memory",
         "network",
+        "pulseaudio",
+        "custom/spotify",
         "clock#1",
         "clock#2",
-        "pulseaudio", 
         "tray",
     ],
 
@@ -47,6 +48,26 @@
 
     },
 
+    "custom/spotify": {
+        "return-type": "json",
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+        "tooltip": false,
+        "escape": true,
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-up" : "playerctl -p spotify next",
+        "on-scroll-down" : "playerctl -p spotify previous",
+    },
+    "pulseaudio": {
+        "format": "{icon}{volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+        "tooltip": false,
+        "on-click": "pavucontrol",
+        "scroll-step": 5,
+    },
+
     "clock#1": {
         "format": " {:%H:%M}",
         "tooltip": false
@@ -56,16 +77,6 @@
         "tooltip": false
     },
 
-    "pulseaudio": {
-        "scroll-step": 5,
-        "format": "{icon}{volume}%",
-        "format-muted": " ",
-        "format-icons": {
-            "default": [" ", " ", " "]
-        },
-        "tooltip": false,
-        "on-click": "pavucontrol"
-    },
     "tray": {
         "icon-size": 20,
         "spacing": 5
