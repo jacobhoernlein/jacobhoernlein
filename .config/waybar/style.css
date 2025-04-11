@@ -8,6 +8,11 @@
 window#waybar {
     background: transparent;
 }
+.modules-left,
+.modules-right {
+    background: @base;
+    border-radius: 10px;
+}
 
 #workspaces,
 #window,
@@ -17,7 +22,6 @@ window#waybar {
 #traygroup {
     color: @text;
     background: @surface0;
-    border: 2px solid @blueFaded;
     border-radius: 10px;
     margin: 5px;
     padding: 5px;
@@ -34,7 +38,7 @@ window#waybar {
 }
 
 #workspaces button {
-    color: @blueFaded;
+    color: @blue;
 }
 #workspaces button.active {
     color: @yellow;
@@ -64,7 +68,7 @@ window#waybar.empty #window {
 #pulseaudio {
     color: @green;
 }
-#custom-spotify {
+#mpris {
     color: @green;
 }
 #clock.1 {

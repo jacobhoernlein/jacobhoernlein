@@ -1,10 +1,11 @@
 {
     "layer": "top",
     "position": "top",
+    "margin": "10 10 5 10",
 
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/window",
     ],
     "modules-right": [
         "group/hardware",
@@ -25,7 +26,7 @@
         "orientation": "horizontal",
         "modules": [
             "pulseaudio",
-            "custom/spotify",
+            "mpris",
         ],
     },
     "group/time": {
@@ -56,7 +57,8 @@
     "hyprland/window": {
         "rewrite": {
             "(.*) — Mozilla Firefox": "$1",
-            "(.*) - Discord": "$1"
+            "(.*) Discord | (.*)": "$2",
+            "(.*) Discord | (.*)": "$2"
         },
         "tooltip": false,
     },
@@ -87,14 +89,10 @@
         "on-click": "pavucontrol",
         "scroll-step": 5,
     },
-    "custom/spotify": {
-        "return-type": "json",
-        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null",
+    "mpris": {
+        "player": "spotify",
+        "format": "󰠃 {artist} 󰝚 {title}",
         "tooltip": false,
-        "escape": true,
-        "on-click": "playerctl -p spotify play-pause",
-        "on-scroll-up" : "playerctl -p spotify next",
-        "on-scroll-down" : "playerctl -p spotify previous",
     },
 
     "clock#1": {
