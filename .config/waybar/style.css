@@ -3,8 +3,6 @@
 * {
     font-family: FiraCode Nerd Font;
     font-size: 18px;
-    border: none;
-    border-radius: 1rem;
 }
 
 window#waybar {
@@ -13,83 +11,66 @@ window#waybar {
 
 #workspaces,
 #window,
-#cpu,
-#memory,
-#network,
-#custom-spotify,
-#pulseaudio,
-#clock,
+#hardware,
+#audio,
+#time,
 #tray {
     color: @text;
-    background-color: @surface0;
+    background-color: @surface0Faded;
     border-style: solid;
     border-width: 2px;
-    border-color: rgba(140, 170, 238, 0.6);
-    margin: 5px 0;
-    padding: 0.25rem 0.5rem;
+    border-color: @blueFaded;
+    margin: 5px;
+    padding: 5px;
 }
 
-#workspaces {
-    margin-left: 10px;
+#workspaces button,
+#hardware *,
+#audio *,
+#time * {
+    color: @text;
+    background: none;
+    border: none;
+    padding: 0px 5px;
 }
+
 #workspaces button {
-    color: @blue;
-    padding: 0.25rem;
+    color: @blueFaded;
 }
 #workspaces button.active {
     color: @yellow;
 }
 #workspaces button:hover {
     color: @text;
+
+    /* Needed to remove hover effects. */
     box-shadow: none;
     text-shadow: none;
-    background: none;
-    border: none;
 }
 
-#window {
-    margin-left: 10px;
-}
+/* Removes #window module when no windows present */
 window#waybar.empty #window {
     all: unset;
 }
 
 #cpu {
     color: @maroon;
-    border-radius: 1rem 0px 0px 1rem;
-    border-right-style: none;
 }
 #memory {
     color: @peach;
-    border-radius: 0px;
-    border-left-style: none;
-    border-right-style: none;
 }
 #network {
     color: @yellow;
-    border-radius: 0px 1rem 1rem 0px;
-    border-left-style: none;
-    margin-right: 10px;
 }
-
-#custom-spotify,
 #pulseaudio {
     color: @green;
-    margin-right: 10px;
 }
-
+#custom-spotify {
+    color: @green;
+}
 #clock.1 {
     color: @teal;
-    border-radius: 1rem 0px 0px 1rem;
-    border-right-style: none;
 }
 #clock.2 {
     color: @sapphire;
-    border-radius: 0px 1rem 1rem 0px;
-    border-left-style: none;
-    margin-right: 10px;
-}
-
-#tray {
-    margin-right: 10px;
 }

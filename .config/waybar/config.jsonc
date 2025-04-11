@@ -7,28 +7,48 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
-        "network",
-        "pulseaudio",
-        "custom/spotify",
-        "clock#1",
-        "clock#2",
+        "group/hardware",
+        "group/audio",
+        "group/time",
         "tray",
     ],
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "network",
+        ],
+    },
+    "group/audio": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "custom/spotify",
+        ],
+    },
+    "group/time": {
+        "orientation": "horizontal",
+        "modules": [
+            "clock#1",
+            "clock#2",
+        ],
+    },
 
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "active": " ",
-             "default": " ",
+            "active": "",
+             "default": "",
         },
     },
     "hyprland/window": {
         "rewrite": {
             "(.*) — Mozilla Firefox": "$1",
             "(.*) - Discord": "$1"
-        }
+        },
+        "tooltip": false,
     },
 
     "cpu": {
@@ -45,18 +65,8 @@
         "interval": 1,
         "format": " {bandwidthDownBits}  {bandwidthUpBits}",
         "tooltip": false
-
     },
 
-    "custom/spotify": {
-        "return-type": "json",
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
-        "tooltip": false,
-        "escape": true,
-        "on-click": "playerctl -p spotify play-pause",
-        "on-scroll-up" : "playerctl -p spotify next",
-        "on-scroll-down" : "playerctl -p spotify previous",
-    },
     "pulseaudio": {
         "format": "{icon}{volume}%",
         "format-muted": " ",
@@ -66,6 +76,15 @@
         "tooltip": false,
         "on-click": "pavucontrol",
         "scroll-step": 5,
+    },
+    "custom/spotify": {
+        "return-type": "json",
+        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null",
+        "tooltip": false,
+        "escape": true,
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-up" : "playerctl -p spotify next",
+        "on-scroll-down" : "playerctl -p spotify previous",
     },
 
     "clock#1": {
@@ -79,6 +98,6 @@
 
     "tray": {
         "icon-size": 20,
-        "spacing": 5
+        "spacing": 10,
     },
 }
