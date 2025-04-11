@@ -10,7 +10,7 @@
         "group/hardware",
         "group/audio",
         "group/time",
-        "tray",
+        "group/traygroup",
     ],
 
     "group/hardware": {
@@ -34,6 +34,16 @@
             "clock#1",
             "clock#2",
         ],
+    },
+    "group/traygroup": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/trayicon",
+            "tray",
+        ],
+        "drawer": {
+            "transition-left-to-right": false,
+        },
     },
 
     "hyprland/workspaces": {
@@ -96,8 +106,12 @@
         "tooltip": false
     },
 
+    "custom/trayicon": {
+        "format": "󰍜",
+        "tooltip": false,
+    },
     "tray": {
         "icon-size": 20,
-        "spacing": 10,
+        "spacing": 5,
     },
 }

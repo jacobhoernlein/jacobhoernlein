@@ -14,12 +14,11 @@ window#waybar {
 #hardware,
 #audio,
 #time,
-#tray {
+#traygroup {
     color: @text;
-    background-color: @surface0Faded;
-    border-style: solid;
-    border-width: 2px;
-    border-color: @blueFaded;
+    background: @surface0Faded;
+    border: 2px solid @blueFaded;
+    border-radius: 10px;
     margin: 5px;
     padding: 5px;
 }
@@ -74,3 +73,11 @@ window#waybar.empty #window {
 #clock.2 {
     color: @sapphire;
 }
+
+#traygroup {
+    padding: 0px 10px;
+}
+#tray {
+    padding-right: 10px;
+}
+
