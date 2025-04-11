@@ -4,7 +4,7 @@ if [[ $(tty) == /dev/tty1 ]] && uwsm check may-start; then
 fi
 
 # Global ZSH Config.
-export PATH=$PATH:/home/jacob/.local/bin
+export PATH=$PATH:/home/jacob/.local/bin:/home/jacob/.spicetify
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 CASE_SENSITIVE="false"

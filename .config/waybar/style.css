@@ -16,7 +16,7 @@ window#waybar {
 #time,
 #traygroup {
     color: @text;
-    background: @surface0Faded;
+    background: @surface0;
     border: 2px solid @blueFaded;
     border-radius: 10px;
     margin: 5px;
