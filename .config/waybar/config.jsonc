@@ -57,8 +57,7 @@
     "hyprland/window": {
         "rewrite": {
             "(.*) — Mozilla Firefox": "$1",
-            "(.*) Discord | (.*)": "$2",
-            "(.*) Discord | (.*)": "$2"
+            ".*Discord \\| (.*)": "$1",
         },
         "tooltip": false,
     },
