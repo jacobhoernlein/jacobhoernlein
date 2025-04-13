@@ -43,6 +43,7 @@
             "tray",
         ],
         "drawer": {
+            "transition-duration": 200,
             "transition-left-to-right": false,
         },
     },

@@ -25,5 +25,7 @@ if [[ -n $WAYLAND_DISPLAY ]]; then
 
         fastfetch
         alias cf="clear && fastfetch"
+
+        export ANI_CLI_EXTERNAL_MENU=1
     fi
 fi

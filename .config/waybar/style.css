@@ -19,12 +19,14 @@ window#waybar {
 #hardware,
 #audio,
 #time,
-#traygroup {
+#traygroup,
+tooltip {
     color: @text;
     background: @surface0;
     border-radius: 10px;
     margin: 5px;
     padding: 5px;
+    min-height: 32px;
 }
 
 #workspaces button,
@@ -85,3 +87,14 @@ window#waybar.empty #window {
     padding-right: 10px;
 }
 
+menu {
+    background: @base;
+    border-radius: 10px;
+    padding: 10px;
+}
+menuitem {
+    background: @surface0;
+}
+menuitem:hover {
+    background: @blue;
+}
